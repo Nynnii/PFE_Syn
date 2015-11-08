@@ -2,6 +2,8 @@
 
 	// On démarre la session utilisateur.
 	// test 
+
+	echo "test2";
 	session_start();
 	require_once('config/connexion_bdd.php');
 	require_once('fonctions/dates.php');
