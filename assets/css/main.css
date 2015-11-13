@@ -8,13 +8,17 @@ body{
 }
 
 /* HEADER */
-
 .navbar .navbar-right .checkbox {
 	color: #337ab7;
 }
 
 #forgotten-pswd {
 	padding-top: 2px;
+}
+
+/* BODY */
+#inscription-title {
+	margin-top: 0px !important;
 }
 	
 /* FONT-SIZE */
