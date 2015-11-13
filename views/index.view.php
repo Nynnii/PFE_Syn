@@ -1,18 +1,18 @@
 <?php $title = "Connexion ou inscription"; ?>
-<?php include 'includes/constants.php'; ?>
 <?php include 'partials/_header.php'; ?>
 
 <div id="main-content">
    	 <div class="container">
-   	 	<div class="jumbotron col-sm-6">
-	    	<p class="font-size-15">
-	    		<strong><?php echo WEBSITE_NAME; ?></strong> est le réseau social de partage pour l'Efrei. <br/>
-	    		Grâce à cette plateforme, vous pouvez tisser des liens d'amitiés avec d'autres étudiants et des anciens, échanger du code source, être aidé ou aider d'autres étudiants dans leurs travaux. Vous pouvez également accéder à votre emploi du temps et à vos cours. Mais ce n'est pas tout, <strong><?php echo WEBSITE_NAME; ?></strong> c'est aussi plein d'autres fonctionnalités !<br/>
-	    		Rejoignez dès maintenant la communauté.
-	    	</p>
-	    	<img class="img-responsive" alt="welcome" src="images/test-1.png"> <!-- Intégrer un Carousel (Slideshow) ici. -->
-	    </div>			
-   	 	<div class="jumbotron col-sm-6"> 	
+   	 	<div class="jumbotron">
+	   	 	<div class="col-sm-6">
+		    	<p class="font-size-15">
+		    		<strong><?php echo WEBSITE_NAME; ?></strong> est le réseau social de partage pour l'Efrei. <br/>
+		    		Grâce à cette plateforme, vous pouvez tisser des liens d'amitiés avec d'autres étudiants et des anciens, échanger du code source, être aidé ou aider d'autres étudiants dans leurs travaux. Vous pouvez également accéder à votre emploi du temps et à vos cours. Mais ce n'est pas tout, <strong><?php echo WEBSITE_NAME; ?></strong> c'est aussi plein d'autres fonctionnalités !<br/>
+		    		Rejoignez dès maintenant la communauté.
+		    	</p>
+		    	<img class="img-responsive" alt="welcome" src="images/test-1.png"> <!-- Intégrer un Carousel (Slideshow) ici. -->
+		    </div>
+	    	<div class="col-sm-offset-7">
    	 			<h1 id="inscription-title">Inscription</h1>
    	 			
    	 			<form method="post">
@@ -49,6 +49,7 @@
    	 				<input type="submit" class="btn btn-primary" value="S'inscrire" name="register" />
    	 				
    	 			</form>
+   	 		</div>
    	 	</div>
    	 </div>
 </div>
