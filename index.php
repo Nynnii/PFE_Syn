@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
@@ -23,7 +24,7 @@ require 'includes/functions.php';
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 				$errors[] = "Votre adresse email n'est pas valide.";
 			}
-			if (mb_strlen($password < 6)) {
+			if (mb_strlen($password) < 6) {
 				$errors[] = "Votre mot de passe est trop court. (6 caractères minimum)";
 			} else {
 				if($password != $password_confirm) {
@@ -34,11 +35,12 @@ require 'includes/functions.php';
 			if (is_used('email', $email, 'users')) {
 				$errors[] = "Cette adresse mail est déjà utilisée";
 			}
-			
+ 			
 			if(count($errors) == 0) {
 				//Envoi mail d'activation
 				$to = $email;
 				$subject = WEBSITE_NAME. " - Activation de compte";
+				$password = sha1($password);
 				$token = sha1($firstname.$email.$password);
 				
 				ob_start();
@@ -51,11 +53,28 @@ require 'includes/functions.php';
 				mail($to, $subject, $content, $headers);
 				
 				//Informer l'utilisateur pour qu'il vérifie sa boite de reception
-				echo "mail d'activation envoye !";
+				set_flash("Mail d'activation envoye !", 'success');
+				
+				$q = $db->prepare('INSERT INTO users(firstname, lastname, class, email, password) 
+									VALUES(:firstname, :lastname, :class, :email, :password)');
+				$q->execute([
+					'firstname' => $firstname,
+					'lastname' => $lastname,
+					'class' => $class,
+					'email' => $email,
+					'password' => ($password)
+				]);
+				
+				redirect('index.php');
+			} else {
+				save_input_data();
 			}
 		} else {
 			$errors[] = "Tous les champs n'ont pas été rempli.";
+			save_input_data();
 		}
+	} else {
+		clear_input_data();
 	}
 	
 	

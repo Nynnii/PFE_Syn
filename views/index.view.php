@@ -14,26 +14,26 @@
 		    </div>
 	    	<div class="col-sm-offset-7">
    	 			<h1 id="inscription-title">Inscription</h1>
-   	 			
+   	 			<?php include 'partials/_error.php'; ?>   	 			
    	 			<form method="post">
    	 				<!-- Champs Prénom -->
    	 				<div class="form-group">
-   	 					<input type="text" class="form-control" name="firstname" placeholder="Prénom" required="required" />   	 					
+   	 					<input type="text" value="<?= get_input('firstname') ?>" class="form-control" name="firstname" placeholder="Prénom" required="required" />   	 					
    	 				</div>
    	 				
    	 				<!-- Champs Nom -->
    	 				<div class="form-group">
-   	 					<input type="text" class="form-control" name="lastname" placeholder="Nom" required="required" />   	 					
+   	 					<input type="text" value="<?= get_input('lastname') ?>" class="form-control" name="lastname" placeholder="Nom" required="required" />   	 					
    	 				</div>
    	 				
    	 				<!-- Champs Promo -->
    	 				<div class="form-group">
-   	 					<input type="number" class="form-control" name="class" placeholder="Promo" required="required" />   	 					
+   	 					<input type="number" value="<?= get_input('class') ?>" class="form-control" name="class" placeholder="Promo" required="required" />   	 					
    	 				</div>
    	 				
    	 				<!-- Champs adresse mail -->
    	 				<div class="form-group">
-   	 					<input type="email" class="form-control" name="email" placeholder="Adresse e-mail" required="required" />   	 					
+   	 					<input type="email" value="<?= get_input('email') ?>" class="form-control" name="email" placeholder="Adresse e-mail" required="required" />   	 					
    	 				</div>
    	 				
    	 				<!-- Champs mot de passe -->
@@ -53,4 +53,4 @@
    	 	</div>
    	 </div>
 </div>
-<?php include 'partials/_footer.php';?>
+<?php include 'partials/_footer.php'; ?>
