@@ -55,11 +55,12 @@ require 'includes/functions.php';
 				//Informer l'utilisateur pour qu'il vérifie sa boite de reception
 				set_flash("Mail d'activation envoye !", 'success');
 				
-				$q = $db->prepare('INSERT INTO users(firstname, lastname, class, email, password) 
-									VALUES(:firstname, :lastname, :class, :email, :password)');
+				$q = $db->prepare('INSERT INTO users(firstname, lastname, status, class, email, password) 
+									VALUES(:firstname, :lastname, :status, :class, :email, :password)');
 				$q->execute([
 					'firstname' => $firstname,
 					'lastname' => $lastname,
+					'status' => $status,
 					'class' => $class,
 					'email' => $email,
 					'password' => ($password)
