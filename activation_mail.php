@@ -20,7 +20,7 @@ if(!empty($_GET['user']) &&
 		$q = $db->prepare("UPDATE users SET active = '1' WHERE firstname = ?");
 		$q->execute([$firstname]);
 		
-		redirect('login.php');
+		redirect('profil.php');
 	} else {
 		set_flash('Parametres invalides.', 'danger');
 		redirect('index.php');
