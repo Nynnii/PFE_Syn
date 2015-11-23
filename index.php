@@ -4,7 +4,34 @@ require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
 
-//Si le formulaire a été soumis
+//Si le formulaire de connexion a été soumis
+if(isset($_POST['login'])) {
+	//Si tous les champs sont remplis
+	if(not_empty(['email', 'password'])) {
+		extract($_POST);
+
+		$q = $db->prepare("SELECT id FROM users WHERE email = :email AND password = :password AND active = '1'");
+
+		$q->execute([
+				'email' => $email,
+				'password' => sha1($password)
+				]);
+
+		$userHasBeenFound = $q->rowCount();
+
+		if($userHasBeenFound) {
+			redirect('profile.php');
+		} else {
+			set_flash('Combinaison adresse mail, mot de passe incorrecte.', 'danger');
+			save_input_data();
+		}
+
+	} else {
+		clear_input_data();
+	}
+}
+	   	
+//Si le formulaire d'inscription a été soumis
 	if(isset($_POST['register'])) {
 		//Si tous les champs sont remplis
 		if(not_empty(['firstname', 'lastname', 'class', 'email', 'password', 'password_confirm'])) {
@@ -55,11 +82,12 @@ require 'includes/functions.php';
 				//Informer l'utilisateur pour qu'il vérifie sa boite de reception
 				set_flash("Mail d'activation envoye !", 'success');
 				
-				$q = $db->prepare('INSERT INTO users(firstname, lastname, class, email, password) 
-									VALUES(:firstname, :lastname, :class, :email, :password)');
+				$q = $db->prepare('INSERT INTO users(firstname, lastname, status, class, email, password) 
+									VALUES(:firstname, :lastname, :status, :class, :email, :password)');
 				$q->execute([
 					'firstname' => $firstname,
 					'lastname' => $lastname,
+					'status' => $status,
 					'class' => $class,
 					'email' => $email,
 					'password' => ($password)
@@ -74,7 +102,7 @@ require 'includes/functions.php';
 			save_input_data();
 		}
 	} else {
-		clear_input_data();
+		clear_input_data(); //Ne pré-rempli pas le formulaire d'inscription quand un utilisateur vient d'arriver sur la page.
 	}
 	
 	

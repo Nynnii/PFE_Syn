@@ -1,5 +1,5 @@
-	    <nav class="navbar navbar-inverse navbar-fixed-top">
-		      <div class="container">
+	   		 <nav class="navbar navbar-inverse navbar-fixed-top">
+		     	 <div class="container">
 			        <div class="navbar-header">
 			          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			           		<span class="sr-only">Toggle navigation</span>
@@ -10,14 +10,14 @@
 			          	<a class="navbar-brand" href="index.php">SYN</a>
 			        </div>
 			        <div id="navbar" class="navbar-collapse collapse">
-			         	 <form class="navbar-form navbar-right">
+			         	 <form class="navbar-form navbar-right" data-parsley-validate method="post">
 			            	<div class="form-group">
-			              		<input type="text" placeholder="Adresse e-mail" class="form-control">
+			              		<input type="email" value="<?= get_input('email') ?>" class="form-control" name="email" placeholder="Adresse e-mail" required="required" /> 
 			            	</div>
 			            	<div class="form-group">
-			              		<input type="password" placeholder="Mot de passe" class="form-control">
+   	 							<input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe" required="required" />   	 					
 			            	</div>
-			            	<button type="submit" class="btn btn-success">Connexion</button>
+			            	<input type="submit" class="btn btn-primary" value="Connexion" name="login" />
 			            	<div class="row">
 				            	<div class="col-sm-5">
 					            	<div class="checkbox">
@@ -30,7 +30,7 @@
 					            	<a href="#">Mot de passe oublié ?</a>				            	
 				            	</div>	          		
 			            	</div>
-			          	</form>
-			        </div>
-		      </div>
-	   	 </nav>
+			       	   	</form>
+					</div>
+				</div>
+			</nav>
