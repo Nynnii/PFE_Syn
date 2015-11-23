@@ -1,6 +1,5 @@
 <?php $title = "Connexion ou inscription"; ?>
 <?php include 'partials/_header.php'; ?>
-
 <div id="main-content">
    	 <div class="container">
    	 	<div class="jumbotron">
@@ -59,5 +58,6 @@
    	 		</div>
    	 	</div>
    	 </div>
+</div>
 </div>
 <?php include 'partials/_footer.php'; ?>
