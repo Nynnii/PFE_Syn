@@ -7,6 +7,7 @@ body{
 	margin-top: 60px;
 }
 
+
 /* HEADER */
 .navbar .navbar-right .checkbox {
 	color: #337ab7;
@@ -16,11 +17,28 @@ body{
 	padding-top: 2px;
 }
 
+
 /* BODY */
 #inscription-title {
 	margin-top: 0px !important;
 }
-	
+
+
+/* FOOTER */
+.footer-mentions, .footer-mentions a {
+	background: rgba(34, 34, 34, 1);
+	color : white;
+}
+
+.footer-mentions a, .footer-mentions p {
+	text-align: center;
+	padding-top: 10px;
+}
+
+#facebook {
+	padding-bottom: 10px;
+}
+
 /* FONT-SIZE */
 .font-size-15 {
 	font-size: 15px !important;
