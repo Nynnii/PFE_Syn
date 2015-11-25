@@ -4,19 +4,15 @@ html, body{
   height: 100%;
 }
 
-
-#wrap{
+body{
+  padding-top: 80px;
   min-height: 100%;
+  display: table;
 }
 
-#wrap > #main-content{
-    padding-top: 75px;
-} 
-
-#wrap > #main-content > .container {
-    padding-top: 40px;
-} 
-
+.jumbotron{
+  margin-top: 50px;
+}
 
 .btn-input {
    display: flex !important;
@@ -50,8 +46,8 @@ html, body{
 
 
 /* FOOTER */
-#footer{
-  /*display: table-row;*/
+footer{
+  display: table-row !important;
   height: 1px;
 }
 
