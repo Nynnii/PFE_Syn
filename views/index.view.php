@@ -9,7 +9,52 @@
 		    		Grâce à cette plateforme, vous pouvez tisser des liens d'amitiés avec d'autres étudiants et des anciens, échanger du code source, être aidé ou aider d'autres étudiants dans leurs travaux. Vous pouvez également accéder à votre emploi du temps et à vos cours. Mais ce n'est pas tout, <strong><?php echo WEBSITE_NAME; ?></strong> c'est aussi plein d'autres fonctionnalités !<br/>
 		    		Rejoignez dès maintenant la communauté.
 		    	</p>
-		    	<img class="img-responsive" alt="welcome" src="images/test-1.png"> <!-- Intégrer un Carousel (Slideshow) ici. -->
+		    	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0"></li>
+				    <li data-target="#myCarousel" data-slide-to="1"></li>
+				    <li data-target="#myCarousel" data-slide-to="2"></li>
+				    <li data-target="#myCarousel" data-slide-to="3"></li>
+				  </ol>
+				
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="images/evlilly.jpg" alt="Evangeline Lilly">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				
+				    <div class="item">
+				      <img src="images/evagreen.jpg" alt="Eva Green">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				
+				    <div class="item">
+				      <img src="images/meganfox.jpg" alt="Megan Fox">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				
+				    <div class="item">
+				      <img src="images/modelstair.jpg" alt="Model posing on the stairs">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				  </div>
+				
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Précédant</span>
+				  </a>
+				  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Suivant</span>
+				  </a>
+				</div>
 		    </div>
 	    	<div class="col-sm-offset-7">
    	 			<h1 id="inscription-title">Inscription</h1>
