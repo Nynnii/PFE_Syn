@@ -6,7 +6,7 @@ html, body{
 
 #wrap{
   margin: 0;
-  min-height: calc(100vh - 43px)
+  min-height: calc(100vh - 50px)
 }
 
 .jumbotron{
@@ -46,6 +46,7 @@ html, body{
 
 /* FOOTER */
 .footer-mentions, .footer-mentions a {
+  height: 50px;
 	background: rgba(34, 34, 34, 1);
 	color : white;
 }
