@@ -20,35 +20,31 @@
 				
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-				    <div class="item active">
-				      <img src="images/evlilly.jpg" alt="Evangeline Lilly">
-				      <div class="carousel-caption">
-				      </div>
-				    </div>
-				
-				    <div class="item">
-				      <img src="images/evagreen.jpg" alt="Eva Green">
-				      <div class="carousel-caption">
-				      </div>
-				    </div>
-				
-				    <div class="item">
-				      <img src="images/meganfox.jpg" alt="Megan Fox">
-				      <div class="carousel-caption">
-				      </div>
-				    </div>
-				
-				    <div class="item">
-				      <img src="images/modelstair.jpg" alt="Model posing on the stairs">
-				      <div class="carousel-caption">
-				      </div>
-				    </div>
+					    <div class="item active">
+						      <img src="images/evlilly.jpg" alt="Evangeline Lilly">
+						      <div class="carousel-caption"></div>
+					    </div>
+					
+					    <div class="item">
+						      <img src="images/evagreen.jpg" alt="Eva Green">
+						      <div class="carousel-caption"></div>
+					    </div>
+					
+					    <div class="item">
+						      <img src="images/meganfox.jpg" alt="Megan Fox">
+						      <div class="carousel-caption"></div>
+					    </div>
+					
+					    <div class="item">
+						      <img src="images/modelstair.jpg" alt="Model posing on the stairs">
+						      <div class="carousel-caption"></div>
+					    </div>
 				  </div>
 				
 				  <!-- Left and right controls -->
 				  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				    <span class="sr-only">Précédant</span>
+				    <span class="sr-only">Précédent</span>
 				  </a>
 				  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
 				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
@@ -89,12 +85,12 @@
    	 				
    	 				<!-- Champs mot de passe -->
    	 				<div class="form-group">
-   	 					<input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe" required="required" data-parsley-trigger="change" />   	 					
+   	 					<input type="password" class="form-control" id="password1" name="password" placeholder="Mot de passe" required="required" data-parsley-trigger="change" />   	 					
    	 				</div>
    	 				
    	 				<!-- Champs confirmer mot de passe -->
    	 				<div class="form-group">
-   	 					<input type="password" id="password_confirm" class="form-control" name="password_confirm" placeholder="Confirmer le mot de passe" required="required" data-parsley-equalto="#password" />   	 					
+   	 					<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirmer le mot de passe" required="required" data-parsley-trigger="change" data-parsley-equalto="#password1" />   	 					
    	 				</div>
    	 				
    	 				<input type="submit" class="btn btn-primary" value="S'inscrire" name="register" />
