@@ -1,3 +1,4 @@
+		</div> <!-- Ferme le wrap du _HEADER.php-->		
 		<footer>
 			<div class="footer-mentions">
 				<div class="container">
