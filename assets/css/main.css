@@ -4,14 +4,16 @@ html, body{
   height: 100%;
 }
 
-body{
-  padding-top: 80px;
+#wrap{
   min-height: 100%;
-  display: table;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -43px;
+  padding: 0 0 43px;
 }
 
 .jumbotron{
-  margin-top: 50px;
+  margin-top: 120px;
 }
 
 .btn-input {
@@ -47,8 +49,7 @@ body{
 
 /* FOOTER */
 footer{
-  display: table-row !important;
-  height: 1px;
+    height: 43px;
 }
 
 .footer-mentions, .footer-mentions a {

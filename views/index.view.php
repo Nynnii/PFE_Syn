@@ -60,6 +60,7 @@
    	 </div>
 
 </div>
+</div>
 <?php include 'partials/_footer.php'; ?>
 
 
