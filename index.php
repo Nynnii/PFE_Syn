@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+include('filters/guest_filter.php');
 require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
@@ -58,11 +60,9 @@ if(isset($_POST['login'])) {
 					$errors[] = "Vos deux mots de passe ne sont pas identiques.";
 				}
 			}
-			
 			if (is_used('email', $email, 'users')) {
 				$errors[] = "Cette adresse mail est déjà utilisée";
 			}
- 			
 			if(count($errors) == 0) {
 				//Envoi mail d'activation
 				$to = $email;

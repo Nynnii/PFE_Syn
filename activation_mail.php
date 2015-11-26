@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+include('filters/guest_filter.php');
 require 'config/dbconnect.php';
 require 'includes/functions.php';
 if(!empty($_GET['user']) && 

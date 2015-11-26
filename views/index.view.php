@@ -99,6 +99,7 @@
    	 		</div>
    	 	</div>
    	 </div>
+
 </div>
 </div>
 <?php include 'partials/_footer.php'; ?>

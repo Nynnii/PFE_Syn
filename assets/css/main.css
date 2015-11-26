@@ -4,19 +4,14 @@ html, body{
   height: 100%;
 }
 
-
 #wrap{
-  min-height: 100%;
+  margin: 0;
+  min-height: calc(100vh - 50px)
 }
 
-#wrap > #main-content{
-    padding-top: 75px;
-} 
-
-#wrap > #main-content > .container {
-    padding-top: 40px;
-} 
-
+.jumbotron{
+  margin-top: 120px;
+}
 
 .btn-input {
    display: flex !important;
@@ -50,12 +45,8 @@ html, body{
 
 
 /* FOOTER */
-#footer{
-  /*display: table-row;*/
-  height: 1px;
-}
-
 .footer-mentions, .footer-mentions a {
+  height: 50px;
 	background: rgba(34, 34, 34, 1);
 	color : white;
 }

@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+include('filters/guest_filter.php');
 require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
@@ -20,6 +22,11 @@ if(isset($_POST['login'])) {
 		$userHasBeenFound = $q->rowCount();
 		
 		if($userHasBeenFound) {
+			$user = $q->fetch(PDO::FETCH_OBJ); // On récupère les données utilisateurs
+
+			$_SESSION['user_id'] = $user->id;
+			$_SESSION['email'] = $user->pseudo;
+
 			redirect('profile.php');
 		} else {
 			set_flash('Combinaison adresse mail, mot de passe incorrecte.', 'danger');
