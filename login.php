@@ -25,9 +25,9 @@ if(isset($_POST['login'])) {
 			$user = $q->fetch(PDO::FETCH_OBJ); // On récupère les données utilisateurs
 
 			$_SESSION['user_id'] = $user->id;
-			$_SESSION['email'] = $user->pseudo;
+			$_SESSION['email'] = $user->email;
 
-			redirect('profile.php');
+			redirect('profile.php?id='.$user->id);
 		} else {
 			set_flash('Combinaison adresse mail, mot de passe incorrecte.', 'danger');
 			save_input_data();

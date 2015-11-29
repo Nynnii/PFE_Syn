@@ -11,7 +11,21 @@
 			          	<a class="navbar-brand" href="index.php">SYN</a>
 			        </div>
 			        <div id="navbar" class="navbar-collapse collapse">
-			         	 <form class="navbar-form navbar-right" data-parsley-validate method="post">
+			        	<?php if(is_logged_in()): ?>
+			        	<ul class="nav navbar-nav navbar-right">
+			        		<li class="<?= set_active('accueil') ?>">
+			        			<a href="#">Accueil</a>
+			        		</li>
+			        		<li class="<?= set_active('profile') ?>">
+			        			<a href="profile.php?id=<?= get_session('user_id') ?>">Mon profil</a>
+			        		</li>	
+			        		<li>
+			        			<a href="logout.php">Déconnexion</a>
+			        		</li>	       		
+			        	</ul>	
+
+			        	<?php else: ?>
+			         	<form class="navbar-form navbar-right" data-parsley-validate method="post">
 			            	<div class="form-group">
 			              		<input type="email" value="<?= get_input('email') ?>" class="form-control" name="email" placeholder="Adresse e-mail" required="required" /> 
 			            	</div>
@@ -32,6 +46,7 @@
 				            	</div>	          		
 			            	</div>
 			       	   	</form>
+			       	   	<?php endif; ?>
 					</div>
 				</div>
 			</nav>

@@ -90,7 +90,7 @@ if(isset($_POST['login'])) {
 					'status' => $status,
 					'class' => $class,
 					'email' => $email,
-					'password' => ($password)
+					'password' => $password
 				]);
 				
 				redirect('index.php');

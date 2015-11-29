@@ -28,6 +28,10 @@ html, body{
    top: 50%;
 }
 
+.panel {
+  margin-top: 120px;
+}
+
 /* HEADER */
 .navbar .navbar-right .checkbox {
 	color: #337ab7;
@@ -42,6 +46,7 @@ html, body{
 #inscription-title {
 	margin-top: 0px !important;
 }
+
 
 
 /* FOOTER */

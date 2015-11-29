@@ -8,6 +8,48 @@ if (!function_exists('e')) {
 	}
 }
 
+//Obtenir une valeur de SESSION grâce à une clé
+if (!function_exists('get_session')) {
+	function get_session($key) {
+		if ($key) {
+			return !empty($_SESSION[$key])
+				? e($_SESSION[$key])
+				: null;
+		}
+	}
+}
+
+//Vérifier si l'utilisateur est connecté
+if (!function_exists('is_logged_in')) {
+	function is_logged_in() {
+		return isset($_SESSION['user_id']) || isset($_SESSION['email']);
+	}
+}
+
+//Obtenir une valeur de SESSION grâce à une clé
+if (!function_exists('get_avatar_url')) {
+	function get_avatar_url($email) {
+		return "http://gravatar.com/avatar/".md5(strtolower(trim(e($email))));
+	}
+}
+
+//Trouver un utilisateur par son id
+if (!function_exists('find_user_by_id')) {
+	function find_user_by_id($id) {
+		global $db;
+
+		$q = $db->prepare('SELECT firstname, lastname, email, status, class, city, country, sex, github, employment_status, description FROM users WHERE id = ?');
+		
+		$q->execute([$id]);
+
+		$data = current($q->fetchAll(PDO::FETCH_OBJ));
+
+		$q->closeCursor();
+
+		return $data;
+	}
+}
+
 if (!function_exists('not-empty')) {
 	//On vérifie si l'utilisateur a bien rempli chaque champs
 	function not_empty($fields = []) { 
@@ -74,6 +116,19 @@ if (!function_exists('clear_input_data')) {
 	function clear_input_data() {
 		if (isset($_SESSION['input'])) {
 			$_SESSION['input'] = [];
+		}
+	}
+}
+
+//Gère l'état actif de nos onglets dans le header
+if (!function_exists('set_active')) {
+	function set_active($file, $class='active') {
+		$path = explode('/', $_SERVER['SCRIPT_NAME']);
+		$page = array_pop($path);
+		if($page == $file.'.php') {
+			return $class;
+		} else {
+			return "";
 		}
 	}
 }
