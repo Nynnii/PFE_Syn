@@ -32,6 +32,18 @@ html, body{
   margin-top: 120px;
 }
 
+.alert {
+    margin-top: 83px !important;
+    margin-bottom: -25px !important;
+}
+
+.panel .alert {
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+}
+
+
+
 /* HEADER */
 .navbar .navbar-right .checkbox {
 	color: #337ab7;
@@ -40,6 +52,15 @@ html, body{
 #forgotten-pswd {
 	padding-top: 2px;
 }
+
+.profile_nav {
+  float: left;
+}
+
+.modify_icon {
+  float: right;
+}
+
 
 
 /* BODY */
@@ -68,6 +89,8 @@ html, body{
 .btn.text-align-left .caret {
 	margin-left: 260px;
 }
+
+
 
 /* PARSLEY */
 input.parsley-success,
@@ -104,6 +127,8 @@ textarea.parsley-error {
 .parsley-errors-list.filled {
   opacity: 1;
 }
+
+
 
 /* FONT-SIZE */
 .font-size-15 {

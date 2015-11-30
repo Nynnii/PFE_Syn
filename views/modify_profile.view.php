@@ -12,7 +12,7 @@
 				  	<div class="panel-body">
 				    	<?php include('partials/_error.php'); ?>
 
-				    	<form method="post" autocomplete="off">
+				    	<form data-parsley-validate method="post" autocomplete="off">
 				    		<div class="row">
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Prénom -->
@@ -22,22 +22,22 @@
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Prénom -->
 				   	 				<div class="form-group">
-				   	 					<label for="firstname">Prénom<span class="text-danger">*</span></label>
-				   	 					<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" required="required" />   	 					
+				   	 					<label for="firstname">Prénom</label>
+				   	 					<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" />   	 					
 				   	 				</div>		   	 			
 				   	 			</div>
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Nom -->
 				   	 				<div class="form-group">
-				   	 					<label for="lastname">Nom<span class="text-danger">*</span></label>
-				   	 					<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom" required="required" />   	 					
+				   	 					<label for="lastname">Nom</label>
+				   	 					<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom" />   	 					
 				   	 				</div>		   	 			
 				   	 			</div>
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Sexe -->
 				   	 				<div class="form-group">
 				   	 					<label for="sex">Sexe<span class="text-danger">*</span></label>
-				   	 					<select name="sex" id="sex" class="form-control">
+				   	 					<select name="sex" id="sex" class="form-control" required="require">
 				   	 						<option value="H">
 				   	 							Homme
 				   	 						</option>
@@ -65,7 +65,7 @@
 				   	 				<!-- Champs Github -->
 				   	 				<div class="form-group">
 				   	 					<label for="github">Github</label>
-				   	 					<input type="text" class="form-control" id="github" name="github" placeholder="Github" required="required" />   	 					
+				   	 					<input type="text" class="form-control" id="github" name="github" placeholder="Github" />   	 					
 				   	 				</div>				   	 			
 				   	 			</div>
 				    		</div>
@@ -89,7 +89,7 @@
 				   	 				<!-- Champs Description -->
 				   	 				<div class="form-group">
 				   	 					<label for="description">Description<span class="text-danger">*</span></label>
-				   	 					<textarea class="form-control" id="description" name="description" cols="30" rows="10" placeholder="Ajouter une description ici..." /></textarea>   	 					
+				   	 					<textarea class="form-control" id="description" name="description" cols="30" rows="10" placeholder="Ajouter une description ici..." required="require" /></textarea>   	 					
 				   	 				</div>				   	 			
 				   	 			</div>
 				    		</div>

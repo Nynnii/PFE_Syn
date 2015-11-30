@@ -25,7 +25,7 @@ if(!empty($_GET['user']) &&
 
 		set_flash('Votre compte à été activé.', 'success');
 		
-		redirect('profil.php');
+		redirect('profile.php');
 	} else {
 		set_flash('Paramètres invalides.', 'danger');
 		redirect('index.php');
