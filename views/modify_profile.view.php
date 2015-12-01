@@ -22,26 +22,26 @@
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Prénom -->
 				   	 				<div class="form-group">
-				   	 					<label for="firstname">Prénom</label>
-				   	 					<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" />   	 					
+				   	 					<label for="firstname">Prénom<span class="text-danger"> *</span></label>
+				   	 					<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" value="<?= e($user->firstname) ?>" required="require" />   	 					
 				   	 				</div>		   	 			
 				   	 			</div>
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Nom -->
 				   	 				<div class="form-group">
-				   	 					<label for="lastname">Nom</label>
-				   	 					<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom" />   	 					
+				   	 					<label for="lastname">Nom<span class="text-danger"> *</span></label>
+				   	 					<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom" value="<?= e($user->lastname) ?>" required="require" />   	 					
 				   	 				</div>		   	 			
 				   	 			</div>
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Sexe -->
 				   	 				<div class="form-group">
-				   	 					<label for="sex">Sexe<span class="text-danger">*</span></label>
-				   	 					<select name="sex" id="sex" class="form-control" required="require">
-				   	 						<option value="H">
+				   	 					<label for="sex">Sexe</label>
+				   	 					<select name="sex" id="sex" class="form-control">
+				   	 						<option value="H" <?= $user->sex =="H" ? "selected" : "" ?>>
 				   	 							Homme
 				   	 						</option>
-				   	 						<option value="F">
+				   	 						<option value="F" <?= $user->sex =="F" ? "selected" : "" ?>>
 				   	 							Femme
 				   	 						</option>
 				   	 					</select>
@@ -50,22 +50,22 @@
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Ville -->
 				   	 				<div class="form-group">
-				   	 					<label for="city">Ville<span class="text-danger">*</span></label>
-				   	 					<input type="text" class="form-control" id="city" name="city" placeholder="Ville" required="required" />   	 					
+				   	 					<label for="city">Ville</label>
+				   	 					<input type="text" class="form-control" id="city" name="city" placeholder="Ville" value="<?= e($user->city) ?>" />   	 					
 				   	 				</div>				   	 			
 				   	 			</div>
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Pays -->
 				   	 				<div class="form-group">
-				   	 					<label for="country">Pays<span class="text-danger">*</span></label>
-				   	 					<input type="text" class="form-control" id="country" name="country" placeholder="Pays" required="required" />   	 					
+				   	 					<label for="country">Pays</label>
+				   	 					<input type="text" class="form-control" id="country" name="country" placeholder="Pays" value="<?= e($user->country) ?>" />   	 					
 				   	 				</div>				   	 			
 				   	 			</div>
 				    			<div class="col-md-4">
 				   	 				<!-- Champs Github -->
 				   	 				<div class="form-group">
 				   	 					<label for="github">Github</label>
-				   	 					<input type="text" class="form-control" id="github" name="github" placeholder="Github" />   	 					
+				   	 					<input type="text" class="form-control" id="github" name="github" placeholder="Github" value="<?= e($user->github) ?>" />   	 					
 				   	 				</div>				   	 			
 				   	 			</div>
 				    		</div>
@@ -77,7 +77,7 @@
 				   	 				<!-- Champs Emploi -->
 				   	 				<div class="form-group">
 				   	 					<label for="employment_status">
-				   	 						<input type="checkbox" name="employment_status" />
+				   	 						<input type="checkbox" name="employment_status" <?= $user->employment_status ? "checked" : "" ?> />
 
 				   	 						Disponible pour emploi ?
 				   	 					</label>  	 					
@@ -88,8 +88,8 @@
 				    			<div class="col-md-12">
 				   	 				<!-- Champs Description -->
 				   	 				<div class="form-group">
-				   	 					<label for="description">Description<span class="text-danger">*</span></label>
-				   	 					<textarea class="form-control" id="description" name="description" cols="30" rows="10" placeholder="Ajouter une description ici..." required="require" /></textarea>   	 					
+				   	 					<label for="description">Description</label>
+				   	 					<textarea class="form-control" id="description" name="description" cols="30" rows="10" placeholder="Ajouter une description ici..." /><?= e($user->description) ?></textarea>   	 					
 				   	 				</div>				   	 			
 				   	 			</div>
 				    		</div>

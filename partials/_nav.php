@@ -16,8 +16,14 @@
 			        		<li class="<?= set_active('accueil') ?>">
 			        			<a href="#">Accueil</a>
 			        		</li>
-			        		<li class="<?= set_active('profile') ?>">
+			        		<li class="<?= set_active('profile') ?> <?= set_active('modify_profile') ?>">
 			        			<a href="profile.php?id=<?= get_session('user_id') ?>">Mon profil</a>
+			        		</li>
+			        		<li class="<?= set_active('timetable') ?>">
+			        			<a href="#">Emploi du temps</a>
+			        		</li>
+			        		<li class="<?= set_active('share_code') ?>">
+			        			<a href="#">Partager du code</a>
 			        		</li>	
 			        		<li>
 			        			<a href="logout.php">Déconnexion</a>

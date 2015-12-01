@@ -6,7 +6,6 @@ require 'config/dbconnect.php';
 require 'includes/functions.php';
 require 'includes/constants.php';
 
-/*
 if(!empty($_GET['id'])) {
 	//Dans le cas où l'utilisateur existe, on va récupérer les infos sur lui en BDD en utilisant son id
 	$user = find_user_by_id($_GET['id']);
@@ -15,9 +14,8 @@ if(!empty($_GET['id'])) {
 		redirect('index.php');
 	}
 } else {
-	redirect('profile.php?id='.get_session('user_id')); //Sinon, on le redirige avec le bon id
+	redirect('modify_profile.php?id='.get_session('user_id')); //Sinon, on le redirige avec le bon id
 }
-*/
 
 //Si le formulaire de connexion a été soumis
 if(isset($_POST['update'])) {
@@ -45,6 +43,7 @@ if(isset($_POST['update'])) {
 		]);
 
 		set_flash("Votre profil a été mis à jour.");
+		redirect('profile.php?id='.get_session('user_id'));
 	} else {
 		save_input_data();
 		$errors[] = "Veuillez remplir tous les champs obligatoires (*)";
