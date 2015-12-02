@@ -23,7 +23,7 @@
 			        			<a href="#">Emploi du temps</a>
 			        		</li>
 			        		<li class="<?= set_active('share_code') ?>">
-			        			<a href="#">Partager du code</a>
+			        			<a href="share_code.php">Partager du code</a>
 			        		</li>	
 			        		<li>
 			        			<a href="logout.php">Déconnexion</a>
