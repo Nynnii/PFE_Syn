@@ -22,7 +22,7 @@
 									$user->class ? '<i class="fa fa-users"></i>&nbsp;Promo&nbsp;'.e($user->class).'<br/>' : '';
 								?>
 								<?=
-									$user->sex == "H" ? '<i class="fa fa-male"></i>&nbsp;Homme<br/>' : '<i class="fa fa-female"></i>&nbsp;Femme<br/>';
+									$user->sex == "F" ? '<i class="fa fa-female"></i>&nbsp;Femme<br/>' : '<i class="fa fa-male"></i>&nbsp;Homme<br/>';
 								?>
 							</div>
 						</div>

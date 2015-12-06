@@ -6,6 +6,18 @@ require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
 
+if(!empty($_GET['id'])) {
+	$data = find_code_by_id($_GET['id']);
+
+	if(!$data) {
+		$code = "";
+	} else {
+		$code = $data->code;
+	}
+} else {
+	$code = "";
+}
+
 //Si le formulaire de connexion a été soumis
 if(isset($_POST['save'])) {
 	if(not_empty(['code'])) {

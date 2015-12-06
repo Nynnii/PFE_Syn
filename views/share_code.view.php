@@ -1,13 +1,15 @@
 <?php $title = "Partager du code source"; ?>
 <?php include 'partials/_header.php'; ?>
+
 <div id="main-content">
    <div class="container">
       <div id="main-content-share-code">
-         <form method="post" action="" autocomplete="off">
-            <textarea name="code" id="code" placeholder="Veuillez entrer du code..." required="required"></textarea>
+         <form method="post" autocomplete="off">
+            <textarea name="code" id="code" placeholder="Veuillez entrer du code..." required="required"><?= e($code); ?></textarea>
 
             <div class="nav-code">
-               <input type="submit" name="save" class="btn btn-success" value="Sauvegarder" />
+               <a href="share_code.php" class="btn btn-primary">Nouveau</a>
+               <input type="submit" name="save" class="btn btn-success" value="Partager" />
             </div>
          </form>
       </div>

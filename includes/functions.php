@@ -50,6 +50,24 @@ if (!function_exists('find_user_by_id')) {
 	}
 }
 
+//Trouver un code par son id
+if (!function_exists('find_code_by_id')) {
+	function find_code_by_id($id) {
+		global $db;
+
+		$q = $db->prepare('SELECT code FROM codes WHERE id = ?');
+		$q->execute([$id]);
+
+		$data = $q->fetch(PDO::FETCH_OBJ);
+
+		$q->closeCursor();
+
+		return $data;
+	}
+}
+
+
+
 if (!function_exists('not-empty')) {
 	//On vérifie si l'utilisateur a bien rempli chaque champs
 	function not_empty($fields = []) { 

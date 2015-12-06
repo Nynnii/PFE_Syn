@@ -30,7 +30,7 @@
 			        		</li>	
 			        		<li>
 			        			<a href="logout.php">Déconnexion</a>
-			        		</li>	       		
+			        		</li>
 			        	</ul>	
 
 			        	<?php else: ?>
@@ -42,6 +42,7 @@
    	 							<input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe" required="required" />   	 					
 			            	</div>
 			            	<input type="submit" class="btn btn-primary" value="Connexion" name="login" />
+			            	<!--
 			            	<div class="row">
 				            	<div class="col-sm-5">
 					            	<div class="checkbox">
@@ -54,6 +55,7 @@
 					            	<a href="#">Mot de passe oublié ?</a>				            	
 				            	</div>	          		
 			            	</div>
+			           		-->
 			       	   	</form>
 			       	   	<?php endif; ?>
 					</div>
