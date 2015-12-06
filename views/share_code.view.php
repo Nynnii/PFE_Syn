@@ -2,15 +2,15 @@
 <?php include 'partials/_header.php'; ?>
 <div id="main-content">
    <div class="container">
-   <div id="main-content-share-code">
-      <form action="" autocomplete="off">
-         <textarea name="code" id="code" placeholder="Veuillez entrer du code..." required="required"></textarea>
+      <div id="main-content-share-code">
+         <form method="post" action="" autocomplete="off">
+            <textarea name="code" id="code" placeholder="Veuillez entrer du code..." required="required"></textarea>
 
-         <div class="nav-code">
-            <input type="submit" name="save" class="btn btn-success" value="Sauvegarder" />
-         </div>
+            <div class="nav-code">
+               <input type="submit" name="save" class="btn btn-success" value="Sauvegarder" />
+            </div>
          </form>
-   </div>
+      </div>
    </div>
 </div>
 
