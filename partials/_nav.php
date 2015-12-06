@@ -22,6 +22,9 @@
 			        		<li class="<?= set_active('timetable') ?>">
 			        			<a href="#">Emploi du temps</a>
 			        		</li>
+			        		<li class="<?= set_active('cours') ?> <?= set_active('cours') ?>">
+			        			<a href="cours.php?id=<?= get_session('user_id') ?>">Cours</a>
+			        		</li>
 			        		<li class="<?= set_active('share_code') ?>">
 			        			<a href="share_code.php">Partager du code</a>
 			        		</li>	
