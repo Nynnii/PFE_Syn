@@ -104,18 +104,7 @@
 					</ul>
 				</div><!-- fin contenu -->
 			</nav>
-	
-			<div class="container-fluid">
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li id="vue_courante"><a href="#">Mosa&iuml;que</a></li>
-						<li><a href="cours2.php?p=<?php echo rawurlencode($repertoire_courant) ?>">D&eacute;tail</a></li>
-						<li><a href="cours3.php?p=<?php echo rawurlencode($repertoire_courant) ?>">Grandes ic&ocirc;nes</a></li>
-					</ul>
-				</div><!-- fin contenu -->
-			</div><!-- fin vues -->
-
-	
+		
 		
 			<div class="container">		
 			
