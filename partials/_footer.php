@@ -6,7 +6,7 @@
 					<div class="row">
 						<div class="col-md-6">
 						<a class="col-xs-2 col-sm-2 col-md-3" href="">SYN@2015</a>
-						<a class="col-xs-2 col-sm-2 col-md-3" href="">Mentions légales</a>
+						<a class="col-xs-2 col-sm-2 col-md-3" href="mentions_legales.php">Mentions légales</a>
 						<a class="col-xs-2 col-sm-2 col-md-3" href="http://www.groupe-efrei.fr/" target="_blank">Groupe Efrei</a>
 						</div>
 						<div class="col-md-6">

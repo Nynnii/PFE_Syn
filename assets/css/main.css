@@ -43,6 +43,20 @@ html, body{
 }
 
 
+/* Mentions legales */
+.mentions .section-heading {
+  font-weight: bolder;
+}
+
+.mentions .section-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mentions .text-justify {
+  font-size: 14px;
+}
+
 
 /* HEADER */
 .navbar .navbar-right .checkbox {
