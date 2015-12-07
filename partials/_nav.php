@@ -16,12 +16,21 @@
 			        		<li class="<?= set_active('accueil') ?>">
 			        			<a href="#">Accueil</a>
 			        		</li>
-			        		<li class="<?= set_active('profile') ?>">
+			        		<li class="<?= set_active('profile') ?> <?= set_active('modify_profile') ?>">
 			        			<a href="profile.php?id=<?= get_session('user_id') ?>">Mon profil</a>
+			        		</li>
+			        		<li class="<?= set_active('timetable') ?>">
+			        			<a href="#">Emploi du temps</a>
+			        		</li>
+			        		<li class="<?= set_active('cours') ?> <?= set_active('cours') ?>">
+			        			<a href="cours.php?id=<?= get_session('user_id') ?>">Cours</a>
+			        		</li>
+			        		<li class="<?= set_active('share_code') ?>">
+			        			<a href="share_code.php">Partager du code</a>
 			        		</li>	
 			        		<li>
 			        			<a href="logout.php">Déconnexion</a>
-			        		</li>	       		
+			        		</li>
 			        	</ul>	
 
 			        	<?php else: ?>
@@ -33,6 +42,7 @@
    	 							<input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe" required="required" />   	 					
 			            	</div>
 			            	<input type="submit" class="btn btn-primary" value="Connexion" name="login" />
+			            	<!--
 			            	<div class="row">
 				            	<div class="col-sm-5">
 					            	<div class="checkbox">
@@ -45,6 +55,7 @@
 					            	<a href="#">Mot de passe oublié ?</a>				            	
 				            	</div>	          		
 			            	</div>
+			           		-->
 			       	   	</form>
 			       	   	<?php endif; ?>
 					</div>
