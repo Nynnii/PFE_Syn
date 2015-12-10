@@ -5,6 +5,7 @@ include('filters/guest_filter.php');
 require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
+require 'initialization/locale.php';
 
 //Si le formulaire de connexion a été soumis
 if(isset($_POST['login'])) {

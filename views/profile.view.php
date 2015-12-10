@@ -13,7 +13,7 @@
 				  	<div class="panel-body">
 						<div class="row">
 							<div class="col-xs-4 col-sm-2 col-md-3">
-								<img src="<?= get_avatar_url($user->email) ?>" alt="Image de profil de <?= e($user->firstname) ?> <?= e($user->lastname) ?>">
+								<img src="<?= get_avatar_url($user->email, 80) ?>" alt="Image de profil de <?= e($user->firstname) ?> <?= e($user->lastname) ?>">
 							</div>
 							<div class="col-xs-8 col-sm-8">
 								<strong><?= e($user->firstname) ?> <?= e($user->lastname) ?></strong><br/>

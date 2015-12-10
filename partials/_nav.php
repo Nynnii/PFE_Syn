@@ -14,10 +14,7 @@
 			        	<?php if(is_logged_in()): ?>
 			        	<ul class="nav navbar-nav navbar-right">
 			        		<li class="<?= set_active('accueil') ?>">
-			        			<a href="#">Accueil</a>
-			        		</li>
-			        		<li class="<?= set_active('profile') ?> <?= set_active('modify_profile') ?>">
-			        			<a href="profile.php?id=<?= get_session('user_id') ?>">Mon profil</a>
+			        			<a href="#"><?= $trad['accueil'][get_current_locale()] ?></a>
 			        		</li>
 			        		<li class="<?= set_active('timetable') ?>">
 			        			<a href="#">Emploi du temps</a>
@@ -28,10 +25,39 @@
 			        		<li class="<?= set_active('share_code') ?>">
 			        			<a href="share_code.php">Partager du code</a>
 			        		</li>	
-			        		<li>
-			        			<a href="logout.php">Déconnexion</a>
-			        		</li>
-			        	</ul>	
+			        		
+			        		<li class="dropdown">
+					            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					            	<img src="<?= get_avatar_url(get_session('email')) ?>" alt="Image de profil de <?= get_session('firstname') ?> <?= get_session('lastname') ?>">
+					            	<span class="caret"></span>
+					            </a>
+					            <ul class="dropdown-menu">
+					        		<li class="<?= set_active('profile') ?> ?>">
+					        			<a href="profile.php?id=<?= get_session('user_id') ?>">Mon profil</a>
+					        		</li>
+					        		<li class="<?= set_active('modify_profile') ?> ?>">
+					        			<a href="modify_profile.php?id=<?= get_session('user_id') ?>">Modifier mon profil</a>
+					        		</li>
+					            	<li>
+					        			<a href="logout.php">Déconnexion</a>
+					        		</li>
+					            </ul>
+				            </li>
+			        		<li class="dropdown">
+					            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					            	Langue
+					            	<span class="caret"></span>
+					            </a>
+					            <ul class="dropdown-menu">
+					        		<li>
+					        			<a href="?lang=fr"><img src="images/french_flag_icon.png">&nbsp;&nbsp;Français</a>
+					        		</li>
+					            	<li>
+					        			<a href="?lang=en"><img src="images/usa_flag_icon.png">&nbsp;&nbsp;Anglais</a>
+					        		</li>
+					            </ul>
+				            </li>				            
+			        	</ul>
 
 			        	<?php else: ?>
 			         	<form class="navbar-form navbar-right" data-parsley-validate method="post">

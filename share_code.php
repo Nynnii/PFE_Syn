@@ -5,6 +5,7 @@ include('filters/user_filter.php');
 require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
+require 'initialization/locale.php';
 
 if(!empty($_GET['id'])) {
 	$data = find_code_by_id($_GET['id']);

@@ -5,6 +5,7 @@ include('filters/guest_filter.php');
 require 'config/dbconnect.php';
 require 'includes/constants.php';
 require 'includes/functions.php';
+require 'initialization/locale.php';
 
 //Si le formulaire de connexion a été soumis
 if(isset($_POST['login'])) {
@@ -12,7 +13,7 @@ if(isset($_POST['login'])) {
 	if(not_empty(['email', 'password'])) {
 		extract($_POST);
 		
-		$q = $db->prepare("SELECT id FROM users WHERE email = :email AND password = :password AND active = '1'");
+		$q = $db->prepare("SELECT id, email, firstname, lastname FROM users WHERE email = :email AND password = :password AND active = '1'");
 		
 		$q->execute([
 			'email' => $email,
@@ -26,6 +27,8 @@ if(isset($_POST['login'])) {
 
 			$_SESSION['user_id'] = $user->id;
 			$_SESSION['email'] = $user->email;
+			$_SESSION['firstname'] = $user->firstname;
+			$_SESSION['lastname'] = $user->lastname;
 
 			redirect('profile.php?id='.$user->id);
 		} else {

@@ -9,6 +9,7 @@ require_once('config/config.inc.php');
 require_once('config/settings.inc.php');
 require_once('includes/functions.php');
 
+require 'initialization/locale.php';
 
 require 'views/cours.view.php';
 

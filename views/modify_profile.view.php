@@ -4,6 +4,8 @@
 <div id="main-content">
    	<div class="container">
    		<div class="row">
+   			<!-- Si on n'est pas sur sa page de modification de profil (id != du notre), alors on n'affiche rien. -->
+   			<?php if(!empty($_GET['id']) && $_GET['id'] === get_session('user_id')): ?>
    			<div class="col-md-12">
    				<div class="panel panel-default">
 				 	<div class="panel-heading">
@@ -98,6 +100,7 @@
 				  	</div>
 				</div>
    			</div>
+   			<?php endif; ?>
    		</div>
 	</div>
 </div>

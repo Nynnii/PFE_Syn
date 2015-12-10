@@ -1,5 +1,6 @@
 <?php
 
+//Echappement
 if (!function_exists('e')) {
 	function e($string) {
 		if($string) {
@@ -19,6 +20,13 @@ if (!function_exists('get_session')) {
 	}
 }
 
+//Obtenir la bonne langue
+if (!function_exists('get_current_locale')) {
+	function get_current_locale() {
+		return $_SESSION['locale'];
+	}
+}
+
 //Vérifier si l'utilisateur est connecté
 if (!function_exists('is_logged_in')) {
 	function is_logged_in() {
@@ -28,8 +36,8 @@ if (!function_exists('is_logged_in')) {
 
 //Obtenir une valeur de SESSION grâce à une clé
 if (!function_exists('get_avatar_url')) {
-	function get_avatar_url($email) {
-		return "http://gravatar.com/avatar/".md5(strtolower(trim(e($email))));
+	function get_avatar_url($email, $size = 18) {
+		return "http://gravatar.com/avatar/".md5(strtolower(trim(e($email))))."?s=".$size;
 	}
 }
 

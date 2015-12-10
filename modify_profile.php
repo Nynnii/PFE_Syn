@@ -5,6 +5,7 @@ include('filters/user_filter.php');
 require 'config/dbconnect.php';
 require 'includes/functions.php';
 require 'includes/constants.php';
+require 'initialization/locale.php';
 
 if(!empty($_GET['id'])) {
 	//Dans le cas où l'utilisateur existe, on va récupérer les infos sur lui en BDD en utilisant son id
@@ -23,7 +24,7 @@ if(isset($_POST['update'])) {
 	$errors = [];
 
 	//Si tous les champs sont remplis
-	if(not_empty(['city', 'country', 'sex', 'description'])) {
+	if(not_empty(['firstname', 'lastname'])) {
 		extract($_POST);
 		
 		$q = $db->prepare('UPDATE users 
