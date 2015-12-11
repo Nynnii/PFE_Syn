@@ -17,7 +17,7 @@
 			        			<a href="#"><?= $trad['accueil'][get_current_locale()] ?></a>
 			        		</li>
 			        		<li class="<?= set_active('timetable') ?>">
-			        			<a href="#">Emploi du temps</a>
+			        			<a href="#"><?= $trad['emploi_du_temps'][get_current_locale()] ?></a>
 			        		</li>
 			        		<li class="<?= set_active('cours') ?> <?= set_active('cours') ?>">
 			        			<a href="cours.php?id=<?= get_session('user_id') ?>">Cours</a>

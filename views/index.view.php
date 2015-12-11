@@ -5,9 +5,7 @@
    	 	<div class="jumbotron">
 	   	 	<div class="col-sm-6">
 		    	<p class="font-size-15">
-		    		<strong><?php echo WEBSITE_NAME; ?></strong> est le réseau social de partage pour l'Efrei. <br/>
-		    		Grâce à cette plateforme, vous pouvez tisser des liens d'amitiés avec d'autres étudiants et des anciens, échanger du code source, être aidé ou aider d'autres étudiants dans leurs travaux. Vous pouvez également accéder à votre emploi du temps et à vos cours. Mais ce n'est pas tout, <strong><?php echo WEBSITE_NAME; ?></strong> c'est aussi plein d'autres fonctionnalités !<br/>
-		    		Rejoignez dès maintenant la communauté.
+		    		<?= $trad['description_home'][get_current_locale()]; ?>
 		    	</p>
 		    	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->
