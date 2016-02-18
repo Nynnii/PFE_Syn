@@ -55,17 +55,17 @@
 				$(this).addClass("stay");
 			});
 
-			$(".repertoire").dblclick(function(){		
+			$(".repertoire").click(function(){		
 				window.location.href = 'cours.php?p='+$(this).attr("id").slice(8);
 			});
-			$(".image").dblclick(function(){		
-				window.location.href = 'ressources/ressource.php?id='+$(this).attr("id").slice(8);
+			$(".image").click(function(){		
+				window.location.href = 'ressource.php?id='+$(this).attr("id").slice(8);
 			});
-			$(".fichier").dblclick(function(){		
-				window.location.href = 'ressources/ressource.php?id='+$(this).attr("id").slice(8);
+			$(".fichier").click(function(){		
+				window.location.href = 'ressource.php?id='+$(this).attr("id").slice(8);
 			});
-			$(".inconnu").dblclick(function(){		
-				window.location.href = 'ressources/ressource.php?id='+$(this).attr("id").slice(8);
+			$(".inconnu").click(function(){		
+				window.location.href = 'ressource.php?id='+$(this).attr("id").slice(8);
 			});
 			
 		});
